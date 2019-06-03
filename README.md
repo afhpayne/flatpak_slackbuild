@@ -16,6 +16,10 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ```
 and you're off to the races.  ```flatpak search``` to find software, ```flatpack install``` to install, etc.  See ```man flatpak``` for details.
 
+#### Rofi note
+
+If Rofi doesn't list flatpak installs, try changing the key binding to ```rofi -show drun```
+
 #### Dependencies
 
 Slackware current has the build tools needed (meson and ninja), and in many cases I've switched these slackbuilds over to meson for convenience.  Since these tools are part of current, I'm removed them as separate dependencies, as well as python3 which is also part of current.  I cannot say if this build will work on 14.2, but certainly not without adding meson ninja and python, and even then... who knows.  If you choose to test it, please report your experience.
