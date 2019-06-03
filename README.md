@@ -19,3 +19,7 @@ and you're off to the races.  ```flatpak search``` to find software, ```flatpack
 #### Dependencies
 
 Slackware current has the build tools needed (meson and ninja), and in many cases I've switched these slackbuilds over to meson for convenience.  Since these tools are part of current, I'm removed them as separate dependencies, as well as python3 which is also part of current.  I cannot say if this build will work on 14.2, but certainly not without adding meson ninja and python, and even then... who knows.  If you choose to test it, please report your experience.
+
+#### Build time
+
+The entire build including all dependencies is under 15 minutes on an intel i7
