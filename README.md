@@ -1,6 +1,6 @@
 ### Flatpak for Slackware current
 
-This repo holds slackbuilds for the most current version of [Flatpak](https://flatpak.org/) as well as current versions of all dependencies.
+This repo holds slackbuilds for the most current version of <a href="https://flatpak.org/" target="_blank">Flatpak</a> as well as current versions of all dependencies.
 
 There are additional dependencies in these slackbuilds that are not part of the out-of-date slackbuilds.org versions.
 
