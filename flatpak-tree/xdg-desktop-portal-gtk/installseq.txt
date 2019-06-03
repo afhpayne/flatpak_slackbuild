@@ -1,0 +1,17 @@
+pipewire
+#ninja
+#python3
+graphviz
+vala
+gcab
+#meson
+libdaemon
+avahi
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+libseccomp
+json-glib
+appstream-glib
+ostree
+bubblewrap
+flatpak

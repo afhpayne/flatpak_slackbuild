@@ -1,0 +1,15 @@
+libdaemon
+graphviz
+json-glib
+avahi
+vala
+pipewire
+geoclue2
+gcab
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+libseccomp
+appstream-glib
+ostree
+bubblewrap
+flatpak
