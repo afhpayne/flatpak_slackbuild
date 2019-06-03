@@ -2,7 +2,7 @@
 
 This repo holds slackbuilds for the most current version of [Flatpak](https://flatpak.org/) as well as current versions of all dependencies.
 
-There are additional dependencies in these slackbuilds that are not part of the out-of-date slackbuilds.org versions.
+There are additional dependencies in these slackbuilds that are _not included_ in the out-of-date slackbuilds.org versions.
 
 This flatpak-tree is compatible with my [slackgrab.py](https://github.com/afhpayne/slackutils) utility, also available here on git.  This tool will populate each of the slackbuild folders with the appropriate tarballs, and verify the md5sums.
 
