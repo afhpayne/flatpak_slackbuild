@@ -6,7 +6,7 @@ There are additional dependencies in these slackbuilds that are **not included**
 
 This flatpak-tree is compatible with my [slackgrab.py](https://github.com/afhpayne/slackutils) utility, also available here on github.  This tool will populate each of the slackbuild folders with the appropriate tarballs, and verify the md5sums.
 
-Flatpak is a fantastic upgrade for Slackware, allowing easy sandboxed installation of software that is difficult to install natively in Slackware and in some instances out of date.  Examples include Libreoffice, Nextcloud, Steam, VLC, and so on. See [flathub.org](https://flathub.org/home) for available titles.
+Flatpak is a fantastic upgrade for Slackware, allowing easy sandboxed installation of software that is difficult to install natively in Slackware due to sprawling dependencies, and is in some instances out of date.  Examples include Libreoffice, Nextcloud, Steam, VLC, and so on. See [flathub.org](https://flathub.org/home) for available titles.
 
 #### Setup
 
