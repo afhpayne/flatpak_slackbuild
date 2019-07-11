@@ -1,8 +1,5 @@
 libdaemon
-graphviz
-json-glib
 avahi
-vala
 pipewire
 geoclue2
 gcab

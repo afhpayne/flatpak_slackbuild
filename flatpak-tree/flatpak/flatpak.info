@@ -5,6 +5,6 @@ DOWNLOAD="https://github.com/flatpak/flatpak/releases/download/1.4.0/flatpak-1.4
 MD5SUM="ca392b93288c237c9a8eeb80980ad62e"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
-REQUIRES="bubblewrap ostree appstream-glib json-glib libseccomp xdg-desktop-portal-gtk"
+REQUIRES="bubblewrap ostree appstream-glib libseccomp xdg-desktop-portal-gtk"
 MAINTAINER="Andrew Payne"
 EMAIL="phalange@komputermatrix.com"
