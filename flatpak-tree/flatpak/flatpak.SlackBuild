@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=flatpak
-VERSION=${VERSION:-1.4.2}
+VERSION=${VERSION:-1.4.3}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_DBs}
 
@@ -95,7 +95,7 @@ for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; r
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
-  README.md COPYING NEWS ABOUT-NLS \
+  README.md COPYING INSTALL NEWS ABOUT-NLS \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/README >  $PKG/usr/doc/$PRGNAM-$VERSION/README.DBs
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
