@@ -89,7 +89,7 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
-  COPYING NEWS ABOUT-NLS \
+  COPYING INSTALL NEWS ABOUT-NLS \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/README >  $PKG/usr/doc/$PRGNAM-$VERSION/README.DBs
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
