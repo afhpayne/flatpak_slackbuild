@@ -2,8 +2,8 @@
 
 # Slackware build script for flatpak
 
-# Copyright 2019 Andrew Payne <phalange@komputermatrix.com>
-# Copyright 2017, 2018 Vincent Batts <vbatts@hashbangbash.com>
+# Copyright 2020-2021 Andrew Payne <phalange@komputermatrix.com>
+# Copyright 2017, 2018, 2019 Vincent Batts <vbatts@hashbangbash.com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=flatpak
-VERSION=${VERSION:-1.4.3}
+VERSION=${VERSION:-1.10.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_DBs}
 
@@ -97,7 +97,7 @@ mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
   README.md COPYING INSTALL NEWS ABOUT-NLS \
   $PKG/usr/doc/$PRGNAM-$VERSION
-cat $CWD/README >  $PKG/usr/doc/$PRGNAM-$VERSION/README.DBs
+cat $CWD/README >  $PKG/usr/doc/$PRGNAM-$VERSION/README.SBo
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install

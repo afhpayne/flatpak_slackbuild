@@ -1,4 +1,4 @@
-### Flatpak for Slackware current __THIS REPO IS RETIRED, PLEASE USE NEW SBo VERSION__
+### Flatpak for Slackware -current
 
 This repo holds slackbuilds for the most current version of [Flatpak](https://flatpak.org/) as well as current versions of all dependencies.
 
