@@ -1,6 +1,6 @@
 ### Flatpak for Slackware -current
 
-This repo holds slackbuilds for the most current version of [Flatpak](https://flatpak.org/) as well as current versions of dependencies that are not in the current Slackware base system.
+This repo holds slackbuilds for a current version of [Flatpak](https://flatpak.org/) as well as current versions of dependencies that are not in the current Slackware base system.
 
 This flatpak-tree is compatible with my [slackgrab.py](https://github.com/afhpayne/slackutils) utility.
 
