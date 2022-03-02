@@ -1,14 +1,19 @@
 Install order:
-libportal 0.3 --> [INSTALLED] version is libportal 0.3 (DBs)
-json-glib 0.3 --> [INSTALLED] version is json-glib 1.6.6
-pipewire 0.3 --> [INSTALLED] version is pipewire 0.3.40
-libseccomp 0.3 --> [INSTALLED] version is libseccomp 2.5.3
-gcab 1.4 --> [INSTALLED] version is gcab 1.4 (DBs)
-meson 1.4 --> [INSTALLED] version is meson 0.59.4
-gnome-desktop 40.0 --> [INSTALLED] version is gnome-desktop 40.0 (DBs)
-xdg-desktop-portal 1.8.1 --> [INSTALLED] version is xdg-desktop-portal 1.10.1
-xdg-desktop-portal-gtk 1.8.0 --> [INSTALLED] version is xdg-desktop-portal-gtk 1.8.0 (DBs)
-appstream-glib 0.7.18 --> [INSTALLED] version is appstream-glib 0.7.18 (DBs)
-ostree 2020.8 --> [INSTALLED] version is ostree 2020.8 (DBs)
-bubblewrap 0.4.1 --> [INSTALLED] version is bubblewrap 0.4.1 (DBs)
-flatpak 1.10.2 --> [INSTALLED] version is flatpak 1.10.2 (DBs)
+gcab 1.4 will replace:
+1  gcab                    1.4 (1_DBs)	INSTALLED
+
+xdg-desktop-portal-gtk 1.10.0 will replace:
+2  xdg-desktop-portal-gtk  1.10.0 (1_DBs)	INSTALLED
+
+appstream-glib 0.7.18 will replace:
+3  appstream-glib          0.7.18 (1_DBs)	INSTALLED
+
+ostree 2021.6 will replace:
+4  ostree                  2021.6 (1_DBs)	INSTALLED
+
+bubblewrap 0.5.0 will replace:
+5  bubblewrap              0.5.0 (1_DBs)	INSTALLED
+
+flatpak 1.12.2 will replace:
+6  flatpak                 1.12.2 (1_DBs)	INSTALLED
+
