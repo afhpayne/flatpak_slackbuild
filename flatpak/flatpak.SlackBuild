@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Slackware build script for bubblewrap
+# Slackware build script for flatpak
 
-# Copyright 2021 Andrew Payne <phalange@komputermatrix..com>
+# Copyright 2020-2022 Andrew Payne <phalange@komputermatrix.com>
 # Copyright 2017, 2018, 2019 Vincent Batts <vbatts@hashbangbash.com>
 # All rights reserved.
 #
@@ -23,11 +23,10 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 cd $(dirname $0) ; CWD=$(pwd)
 
-PRGNAM=bubblewrap
-VERSION=${VERSION:-0.5.0}
+PRGNAM=flatpak
+VERSION=${VERSION:-1.14.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_DBs}
 PKGTYPE=${PKGTYPE:-tgz}
@@ -90,10 +89,13 @@ CXXFLAGS="$SLKCFLAGS" \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --build=$ARCH-slackware-linux
+  --build=$ARCH-slackware-linux \
+  --with-system-bubblewrap
 
 make
 make install DESTDIR=$PKG
+
+chmod +x $PKG/etc/profile.d/flatpak.sh
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
@@ -103,12 +105,14 @@ for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; r
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
-  COPYING \
+  README.md COPYING INSTALL NEWS ABOUT-NLS \
   $PKG/usr/doc/$PRGNAM-$VERSION
+cat $CWD/README >  $PKG/usr/doc/$PRGNAM-$VERSION/README.SBo
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.$PKGTYPE
