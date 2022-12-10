@@ -14,6 +14,6 @@ bubblewrap:
 bubblewrap: Bubblewrap provides container runtime for unprivileged users, which
 bubblewrap: reduces the surface area for privilege escalation.
 bubblewrap:
-bubblewrap:
+bubblewrap: Homepage: https://github.com/containers/bubblewrap
 bubblewrap:
 bubblewrap:
