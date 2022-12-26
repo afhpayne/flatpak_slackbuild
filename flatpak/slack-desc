@@ -8,9 +8,9 @@
        |-----handy-ruler------------------------------------------------------|
 flatpak: flatpak (sandboxing desktop applications)
 flatpak:
-flatpak: flatpak is tools and an API for building, distributing and running
-flatpak: desktop applications in unprivileged sandboxes.
-flatpak:
+flatpak: Linux application sandboxing and distribution framework
+flatpak: 
+flatpak: Homepage: https://flatpak.org/
 flatpak:
 flatpak:
 flatpak:
