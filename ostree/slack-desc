@@ -12,7 +12,7 @@ ostree: OSTree is a tool that combines a "git-like" model for committing and
 ostree: downloading bootable filesystem trees, along with a layer for
 ostree: deploying them and managing the bootloader configuration.
 ostree:
-ostree:
+ostree: Homepage https://ostreedev.github.io/ostree/
 ostree:
 ostree:
 ostree:

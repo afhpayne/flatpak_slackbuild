@@ -1,10 +1,19 @@
 PRGNAM="xdg-desktop-portal-gtk"
-VERSION="1.14.1"
+VERSION="1.12.0"
 HOMEPAGE="https://flatpak.org/"
 DOWNLOAD="UNSUPPORTED"
 MD5SUM=""
+<<<<<<< HEAD
 DOWNLOAD_x86_64="https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.14.1/xdg-desktop-portal-gtk-1.14.1.tar.xz"
 MD5SUM_x86_64="91a3a21cd0b24d59a0f977508717159a"
 REQUIRES="xdg-desktop-portal"
+<<<<<<< HEAD
+=======
+=======
+DOWNLOAD_x86_64="https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.12.0/xdg-desktop-portal-gtk-1.12.0.tar.xz"
+MD5SUM_x86_64="2c50a77eaa80495c9dca3dd33b53a432"
+REQUIRES=""
+>>>>>>> dfc0d3c65df25f6d615ffe732df7c9bd7c12e62c
+>>>>>>> 5e1afd873ccd945eac9f9bf4e84faeca7bf30fa8
 MAINTAINER="Andrew Payne"
 EMAIL="phalange@komputermatrix.com"
