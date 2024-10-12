@@ -6,14 +6,9 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
        |-----handy-ruler------------------------------------------------------|
-flatpak: flatpak (sandboxing desktop applications)
+flatpak: flatpak (sandboxing and distribution framework)
 flatpak:
-flatpak: Linux application sandboxing and distribution framework
+flatpak: Linux application sandboxing and distribution framework.
 flatpak: 
 flatpak: Homepage: https://flatpak.org/
-flatpak:
-flatpak:
-flatpak:
-flatpak:
-flatpak:
 flatpak:

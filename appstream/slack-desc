@@ -5,11 +5,10 @@
 # You must make exactly 11 lines for the formatting to be correct.  It's also
 # customary to leave one space after the ':' except on otherwise blank lines.
 
-          |-----handy-ruler------------------------------------------------------|
-bubblewrap: bubblewrap (Low-level unprivileged sandboxing tool)
-bubblewrap:
-bubblewrap: Low-level unprivileged sandboxing tool used by Flatpak and
-bubblewrap: similar projects.
-bubblewrap:
-bubblewrap: https://github.com/containers/bubblewrap
-bubblewrap:
+         |-----handy-ruler------------------------------------------------------|
+appstream: appstream (Tools and libraries to work with AppStream metadata)
+appstream:
+appstream: Tools and libraries to work with AppStream metadata.
+appstream: 
+appstream: https://github.com/hughsie/appstream-glib/
+appstream:

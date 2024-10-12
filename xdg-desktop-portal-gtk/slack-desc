@@ -6,14 +6,10 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
                       |-----handy-ruler------------------------------------------------------|
-xdg-desktop-portal-gtk: xdg-desktop-portal-gtk (gtk sandboxing desktop APIs)
+xdg-desktop-portal-gtk: xdg-desktop-portal-gtk (gtk backend implementation)
 xdg-desktop-portal-gtk:
-xdg-desktop-portal-gtk: xdg-desktop-portal-gtk are APIs for building sandoxed portal of
-xdg-desktop-portal-gtk: desktop services and integrations.
+xdg-desktop-portal-gtk: A backend implementation for xdg-desktop-portal that is using GTK and
+xdg-desktop-portal-gtk: various pieces of GNOME infrastructure.
 xdg-desktop-portal-gtk:
-xdg-desktop-portal-gtk:
-xdg-desktop-portal-gtk:
-xdg-desktop-portal-gtk:
-xdg-desktop-portal-gtk:
-xdg-desktop-portal-gtk:
+xdg-desktop-portal-gtk: Homepage: https://github.com/flatpak/xdg-desktop-portal-gtk
 xdg-desktop-portal-gtk:

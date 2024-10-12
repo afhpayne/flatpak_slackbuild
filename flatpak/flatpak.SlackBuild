@@ -2,7 +2,7 @@
 
 # Slackware build script for flatpak
 
-# Copyright 2020-2022 Andrew Payne <phalange@komputermatrix.com>
+# Copyright 2020-2024 Andrew Payne <phalange@komputermatrix.com>
 # Copyright 2017, 2018, 2019 Vincent Batts <vbatts@hashbangbash.com>
 # All rights reserved.
 #
@@ -26,7 +26,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=flatpak
-VERSION=${VERSION:-1.12.7}
+VERSION=${VERSION:-1.14.10}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_DBs}
 PKGTYPE=${PKGTYPE:-tgz}
@@ -65,6 +65,7 @@ cd $TMP
 rm -rf $PRGNAM-$VERSION
 tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
 cd $PRGNAM-$VERSION
+
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -81,11 +82,14 @@ CXXFLAGS="$SLKCFLAGS" \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --build=$ARCH-slackware-linux \
-  --with-system-bubblewrap
+  --disable-static \
+  --build=$ARCH-slackware-linux
 
 make
 make install DESTDIR=$PKG
+
+# Don't ship .la files:
+rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
 chmod +x $PKG/etc/profile.d/flatpak.sh
 
@@ -97,9 +101,8 @@ for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; r
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
-  README.md COPYING INSTALL NEWS ABOUT-NLS \
+  COPYING NEWS \
   $PKG/usr/doc/$PRGNAM-$VERSION
-cat $CWD/README >  $PKG/usr/doc/$PRGNAM-$VERSION/README.SBo
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install

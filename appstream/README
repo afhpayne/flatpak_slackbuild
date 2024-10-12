@@ -1,0 +1,10 @@
+AppStream
+
+AppStream makes machine-readable software metadata easily
+accessible. It is a foundational block for modern Linux
+software centers, offering a seamless way to retrieve
+information about available software, no matter the
+repository it is contained in. It can provide data about
+available applications as well as available firmware, drivers,
+fonts and other components. This project it part of
+freedesktop.org.

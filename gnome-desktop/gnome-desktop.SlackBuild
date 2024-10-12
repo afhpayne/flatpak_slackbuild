@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Slackware build script for bubblewrap
+# Slackware build script for gnome-desktop
 
 # Copyright 2024 Andrew Payne <phalange@komputermatrix.com>
 # All rights reserved.
@@ -22,10 +22,12 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Updated to version 40.2 by Igor Alexandrov <igor.alexandrov@outlook.com>
+
 cd $(dirname $0) ; CWD=$(pwd)
 
-PRGNAM=bubblewrap
-VERSION=${VERSION:-0.10.0}
+PRGNAM=gnome-desktop
+VERSION=${VERSION:-44.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_DBs}
 PKGTYPE=${PKGTYPE:-tgz}
@@ -38,6 +40,9 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+# If the variable PRINT_PACKAGE_NAME is set, then this script will report what
+# the name of the created package would be, and then exit. This information
+# could be useful to other scripts.
 if [ ! -z "${PRINT_PACKAGE_NAME}" ]; then
   echo "$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.$PKGTYPE"
   exit 0
@@ -67,7 +72,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
 cd $PRGNAM-$VERSION
 
 chown -R root:root .
@@ -82,14 +87,14 @@ cd build
   CFLAGS="$SLKCFLAGS" \
   CXXFLAGS="$SLKCFLAGS" \
   meson setup .. \
-    --buildtype=release \
-    --infodir=/usr/info \
+    --prefix=/usr \
     --libdir=/usr/lib${LIBDIRSUFFIX} \
+    --sysconfdir=/etc \
     --localstatedir=/var \
     --mandir=/usr/man \
-    --prefix=/usr \
-    --sysconfdir=/etc \
-    -Dstrip=true
+    --infodir=/usr/info \
+    --buildtype=release \
+    -Dsystemd=disabled
   "${NINJA:=ninja}"
   DESTDIR=$PKG $NINJA install
 cd ..
@@ -100,12 +105,9 @@ rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
-find $PKG/usr/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
-
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
-  CODE-OF-CONDUCT.md COPYING README.md SECURITY.md \
+  AUTHORS CONTRIBUTING.md COPYING COPYING-DOCS COPYING.LIB NEWS README.md \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 

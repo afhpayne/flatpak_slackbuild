@@ -1,11 +1,21 @@
-Flatpak is a framework for distributing desktop applications
-across various Linux distributions. It has been created by
-developers who have a long history of working on the Linux
-desktop, and is run as an independent open source project.
+Flatpak
 
-You can find many apps already available on https://flathub.org/
+Flatpak is a system for building, distributing, and running
+sandboxed desktop applications on Linux.
 
-Allow installs to your whole system:
+See https://flatpak.org/ for more information.
+
+Flatpak is available in the package repositories of most
+Linux distributions and can be installed from there.
+
+See https://flatpak.org/setup/ for quick setup instructions
+for many distributions.
+
+You can find many apps already available on
+https://flathub.org/
+
+
+Note: you can allow installs to your whole system:
 
 sudo flatpak remote-add --if-not-exists flathub \
      https://dl.flathub.org/repo/flathub.flatpakrepo
