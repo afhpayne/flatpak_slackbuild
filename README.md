@@ -22,9 +22,11 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 and you're off to the races.  ```flatpak search``` to find software, ```flatpack install``` to install, etc.  See ```man flatpak``` for details.
 
 #### Version 1.14.10
-There's an intermittent issue with the flathub repo reporting error 7, no connection. So for this version, flatpaks **cannot** be installed with
-```flatpak install [application-id]```
-Instead use
+There's an intermittent issue with the flathub repo reporting error 7, no connection.  
+  
+So for this version, flatpaks **cannot** be installed with  
+```flatpak install [application-id]```  
+Instead use  
 ```flatpak install flathub [application-id]```
 
 #### Rofi note
